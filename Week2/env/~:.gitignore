@@ -21,7 +21,7 @@ venv
 node_modules
 .sass-cache
 
-
+# folder logs
 bin/
 include/
 lib/
