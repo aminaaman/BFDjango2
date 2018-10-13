@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+<h1>Tasks in "List1"</h1>
+{% block task_table %}
+    <div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Created</th>
+        <th>Due on</th>
+          <th>Owner</th>
+          <th>Mark</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in list %}
+        <tr>
+            <td><a href="">{{task.name}}</a></td>
+            <td>{{task.created}}</td>
+            <td>{{task.due_to}}</td>
+            <td>{{task.owner}}</td>
+             <td>
+                 <a class="btn btn-info" href = "{%url 'task_change' task.id%}">
+                     {%if task.mark%}
+                        Done
+                     {%else %}
+                        Not done
+                     {%endif%}
+                 </a>
+             </td>
+            <td>
+                <a href = "{%url 'task_delete' task.id%}"  class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+{% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

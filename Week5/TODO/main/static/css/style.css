@@ -1,0 +1,23 @@
+ .main{
+    display: flex;
+    flex-direction: column;
+ }
+ #addbtn{
+    position:relative;
+    height: 40px;
+    width: 80px;
+    left:350px;
+ }
+ .bottom{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    left:350px;
+ }
+
+ #success{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    left:350px;
+ }
