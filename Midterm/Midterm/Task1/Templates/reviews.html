@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<hr>
+    <h1>RMenu</h1>
+<hr>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Restaurant</th>
+        <th>telephone</th>
+        <th>city</th>
+        <th>Administrator</th>
+    </tr>
+</thead>
+{% for t in review_list%}
+    <tr>
+        <td>{{t.name}}</td>
+        <td>{{t.number}}</td>
+        <td>{{t.city}}</td>
+        <td>{{t.user}}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+<hr>
+
+{% endblock %}
